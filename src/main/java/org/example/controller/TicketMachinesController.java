@@ -22,22 +22,24 @@ public class TicketMachinesController extends Application {
         primaryStage.setTitle("Ticket Vending Machines");
 
         TicketMachine ticketMachine1 = new TicketMachine();
-        TicketMachine ticketMachine2 = new TicketMachine();
+        //TicketMachine ticketMachine2 = new TicketMachine();
         TicketMachineLot ticketMachineLot = new TicketMachineLot();
+
+        new Banque().attribuer( new GuichetAutomatique());
 
         TabPane root = new TabPane();
 
-        Tab tabOfMachine2 = new Tab();
-        tabOfMachine2.setText("Machine 2");
-        FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("/view/TicketMachine2.fxml"));
-        fxmlLoader2.setControllerFactory(new Callback<Class<?>, Object>() {
-            @Override
-            public Object call(Class<?> param) {
-                TicketMachineGraphicalController ticketMachine2GraphicalController = new TicketMachineGraphicalController(ticketMachineLot, ticketMachine2);
-                return ticketMachine2GraphicalController;
-            }
-        });
-        tabOfMachine2.setContent(fxmlLoader2.load());
+//        Tab tabOfMachine2 = new Tab();
+//        tabOfMachine2.setText("Machine 2");
+//        FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("/view/TicketMachine.fxml"));
+//        fxmlLoader2.setControllerFactory(new Callback<Class<?>, Object>() {
+//            @Override
+//            public Object call(Class<?> param) {
+//                TicketMachineGraphicalController ticketMachine2GraphicalController = new TicketMachineGraphicalController(ticketMachineLot, ticketMachine2);
+//                return ticketMachine2GraphicalController;
+//            }
+//        });
+//        tabOfMachine2.setContent(fxmlLoader2.load());
 
         Tab tabOfMachine1 = new Tab();
         tabOfMachine1.setText("Machine 1");
@@ -49,7 +51,7 @@ public class TicketMachinesController extends Application {
                 ChangeListener<Boolean> handlerOfMachine2Opening = new ChangeListener<>() {
                     @Override
                     public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                        root.getTabs().add(tabOfMachine2); // @learning This code does not execute multiple times once machine is opened unlike before, even though java.util.List.add(E) prevents from adding multiple tabs
+                        root.getTabs().add(tabOfMachine1); // @learning This code does not execute multiple times once machine is opened unlike before, even though java.util.List.add(E) prevents from adding multiple tabs
                     }
                 };
                 ticketMachine1GraphicalController.openMachine2OnDemand(handlerOfMachine2Opening);
@@ -59,7 +61,7 @@ public class TicketMachinesController extends Application {
         tabOfMachine1.setContent(fxmlLoader1.load());
         root.getTabs().add(tabOfMachine1);
 
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene = new Scene(root, 250, 250);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
