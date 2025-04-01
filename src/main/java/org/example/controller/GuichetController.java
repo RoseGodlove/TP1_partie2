@@ -26,12 +26,14 @@ public class GuichetController extends Application {
         guichet = new GuichetAutomatique();
         banque.attribuer(guichet);
         afficherMessage("Guichet attribué", "Guichet #" + guichet.getId() + " vous est attribué.");
+
     }
 
 
     @FXML
     private void afficherAide() {
-        afficherMessage("Aide", "Coordonnées du soutien technique :\n" + guichet.getContactSoutien());
+        //afficherMessage("Aide", "Coordonnées du soutien technique :\n" + guichet.getContactSoutien());
+        guichet.obtenirLesCoordonneesDuSoutienTechnique();
     }
 
     @FXML

@@ -5,7 +5,7 @@ public class GuichetAutomatique {
     private final String contactSoutien = "support@quebbanque.ca | 1-800-123-4567";
 
     public GuichetAutomatique() {
-        this.id = Math.random();
+        this.id = Math.floor(Math.random()*10);
     }
 
     public double getId() {
@@ -16,7 +16,7 @@ public class GuichetAutomatique {
         return contactSoutien;
     }
 
-    static String obtenirLesCoordonneesDuSoutienTechnique() {
+    public String obtenirLesCoordonneesDuSoutienTechnique() {
         return "Appelez-nous au 1-543-348-4895 ";
     }
 
