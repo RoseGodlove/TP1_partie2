@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.controller;
 
 public class Client {
     public void selectionner(Compte compte, GuichetAutomatique guichetAutomatique) {
