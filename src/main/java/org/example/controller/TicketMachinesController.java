@@ -41,7 +41,7 @@ public class TicketMachinesController extends Application {
 
         Tab tabOfMachine1 = new Tab();
         tabOfMachine1.setText("Machine 1");
-        FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/view/TicketMachine.fxml"));
+        FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/view/guichet.fxml"));
         fxmlLoader1.setControllerFactory(new Callback<Class<?>, Object>() {
             @Override
             public Object call(Class<?> param) {

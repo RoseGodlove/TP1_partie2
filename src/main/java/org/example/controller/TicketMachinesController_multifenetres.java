@@ -6,8 +6,6 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.example.model.TicketMachine;
@@ -37,7 +35,7 @@ public class TicketMachinesController_multifenetres extends Application {
         Parent root2 = fxmlLoader2.load();
         Scene scene2 = new Scene(root2, 600, 400);
 
-        FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/view/TicketMachine.fxml"));
+        FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/view/guichet.fxml"));
         fxmlLoader1.setControllerFactory(new Callback<Class<?>, Object>() {
             @Override
             public Object call(Class<?> param) {
