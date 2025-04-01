@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.TicketMachineGraphicalController">
-    <stylesheets>
-        <URL value="@TicketMachine.css" />
-    </stylesheets>
-    <children>
-        <Label text="Selected Route:" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0">
+<BorderPane stylesheets="@guichet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.GuichetController">
+
+    <top>
+        <Label styleClass="titre" text="Guichet automatique - QuébBanque" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20" top="20" />
+            </padding>
         </Label>
+    </top>
 
-        <Text fx:id="selectedRoute" text="NONE" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="8.0">
-        </Text>
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
 
-        <Button fx:id="changeToRoute1" text="Route 1" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="40.0">
-        </Button>
+            <TextField fx:id="numeroCompteField" promptText="Numéro de compte" />
+            <HBox alignment="CENTER" spacing="10">
+                <Button onAction="#selectionnerCompte" text="Sélectionner le compte" />
+            </HBox>
 
-        <Button fx:id="changeToRoute2" text="Route 2" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="40.0">
-        </Button>
-      <Button layoutX="27.0" layoutY="77.0" mnemonicParsing="false" onAction="#openMachine2" text="Open machine 2" />
-    </children>
-</AnchorPane>
+            <TextField fx:id="montantDepotField" promptText="Montant du dépôt" />
+            <Button onAction="#effectuerDepot" text="Déposer" />
+
+            <TextField fx:id="montantRetraitField" promptText="Montant du retrait (multiple de 20)" />
+            <Button onAction="#effectuerRetrait" text="Retirer" />
+            <Button fx:id="aide" onAction="#afficherAide" text="Aide" />
+        </VBox>
+    </center>
+</BorderPane>
