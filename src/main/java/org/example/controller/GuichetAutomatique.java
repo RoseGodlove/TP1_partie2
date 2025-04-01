@@ -23,11 +23,6 @@ public class GuichetAutomatique {
         return contactSoutien;
     }
 
-    static String obtenirLesCoordonneesDuSoutienTechnique() {
-        return "Appelez-nous au 1-543-348-4895 ";
-    }
 
-    public void selectionner(Compte compte) {
 
-    }
 }
