@@ -1,7 +1,5 @@
 package org.example.model;
 
-import org.example.controller.GuichetAutomatique;
-
 public class Compte {
 
 private static final int NO_COMPTE = 12345678;

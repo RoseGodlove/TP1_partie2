@@ -1,7 +1,5 @@
 package org.example.model;
 
-import org.example.controller.GuichetAutomatique;
-
 public class Client {
 
     int noCompte;
