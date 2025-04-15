@@ -6,4 +6,10 @@ public class Comptabilite {
 
     }
 
+    public String visualiserDonCharite(){
+
+        return "";
+    }
+
+
 }
