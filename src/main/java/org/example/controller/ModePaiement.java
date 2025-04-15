@@ -2,13 +2,13 @@ package org.example.controller;
 
 public class ModePaiement {
 
-    public void selectionnerModePaiement(){
-
+    enum MODEPAIEMENT {
+        ARGENT,
+        CARTE_DEBIT,
+        CARTE_CREDIT,
+        CRYPTO;
     }
 
-    public String genererNumeroCompte(){
 
-        return "";
-    }
 
 }
