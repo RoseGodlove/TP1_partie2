@@ -1,0 +1,40 @@
+
+
+.titre {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-background-color: #003366;
+    -fx-alignment: center;
+}
+
+.label-field {
+    -fx-background-color: lightblue;
+    -fx-font-size: 13px;
+    -fx-border-color: transparent;
+}
+
+.text-field {
+    -fx-pref-width: 250px;
+    -fx-font-size: 14px;
+}
+
+.instruction-field {
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+}
+
+.button {
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #218838;
+}
+
