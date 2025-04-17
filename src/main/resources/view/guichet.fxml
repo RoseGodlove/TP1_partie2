@@ -1,40 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane stylesheets="@guichet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.GuichetController">
-
-    <top>
-        <Label styleClass="titre" text="Guichet automatique - QuébBanque" BorderPane.alignment="CENTER">
-            <padding>
-                <Insets bottom="20" top="20" />
-            </padding>
-        </Label>
-    </top>
-
-    <center>
-        <VBox alignment="CENTER" spacing="15">
-            <padding>
-                <Insets bottom="20" left="20" right="20" top="20" />
-            </padding>
-
-            <TextField fx:id="numeroCompteField" promptText="Numéro de compte" />
-            <HBox alignment="CENTER" spacing="10">
-                <Button onAction="#selectionnerCompte" text="Sélectionner le compte" />
-            </HBox>
-
-            <TextField fx:id="montantDepotField" promptText="Montant du dépôt" />
-            <Button onAction="#effectuerDepot" text="Déposer" />
-
-            <TextField fx:id="montantRetraitField" promptText="Montant du retrait (multiple de 20)" />
-            <Button onAction="#effectuerRetrait" text="Retirer" />
-            <Button fx:id="aide" onAction="#afficherAide" text="Aide" />
-        </VBox>
-    </center>
+<BorderPane stylesheets="@guichet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.SystemeDeFactureController">
+   <top>
+      <AnchorPane prefHeight="553.0" prefWidth="754.0" BorderPane.alignment="CENTER">
+         <children>
+            <TitledPane id="titre" animated="false" layoutX="-2.0" prefHeight="66.0" prefWidth="761.0" style="-fx-background-color: blue;" styleClass="titre" text="Système de facture TopVentes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </TitledPane>
+            <TextField layoutX="375.0" layoutY="150.0" />
+            <TextField layoutX="375.0" layoutY="199.0" prefHeight="25.0" prefWidth="249.0" />
+            <ComboBox layoutX="404.0" layoutY="312.0" prefWidth="150.0" />
+            <Button layoutX="378.0" layoutY="396.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="251.0" style="-fx-background-color: Green;" text="Enregistrer" />
+            <TextField alignment="TOP_LEFT" layoutX="36.0" layoutY="150.0" style="-fx-background-color: lightblue;" text="Nom complet de l'acheteur :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="36.0" layoutY="199.0" style="-fx-background-color: lightblue;" text="Montant total sans taxes :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="378.0" layoutY="482.0" prefHeight="25.0" prefWidth="338.0" text="Total des dons : ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="36.0" layoutY="252.0" style="-fx-background-color: lightblue;" text="Montant des taxes applicables  :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField accessibleRole="TEXT_AREA" layoutX="238.0" layoutY="72.0" prefHeight="39.0" prefWidth="366.0" style="-fx-border-color: none;" text="Entrer les informations suivantes :">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField layoutX="378.0" layoutY="252.0" />
+            <TextField layoutX="36.0" layoutY="312.0" style="-fx-background-color: lightblue;" text="Mode de paiement :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </top>
 </BorderPane>
