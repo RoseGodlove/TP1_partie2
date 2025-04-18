@@ -32,7 +32,7 @@ public class SystemeDeFactureController extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/view/facture.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("QuébBanque - Guichet");
+        stage.setTitle("TopVentes - Facture");
         stage.setScene(scene);
         stage.show();
     }

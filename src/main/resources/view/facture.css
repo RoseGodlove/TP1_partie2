@@ -1,40 +1,55 @@
-
-
 .titre {
     -fx-font-size: 30px;
     -fx-font-weight: bold;
-    -fx-text-fill: black;
+    -fx-text-fill:black;
     -fx-background-color: #003366;
     -fx-alignment: center;
+    -fx-padding: 20px;
+    -fx-background-radius: 8px;
+    -fx-max-width: Infinity;
+    -fx-text-alignment: center;
 }
 
 .label-field {
-    -fx-background-color: lightblue;
-    -fx-font-size: 13px;
-    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-text-fill: #003366;
+    -fx-padding: 6px 0;
 }
 
 .text-field {
-    -fx-pref-width: 250px;
+    -fx-pref-width: 300px;
     -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
 }
 
 .instruction-field {
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
-    -fx-border-color: none;
+    -fx-text-fill: #333;
+    -fx-padding: 5px 0;
 }
 
 .button {
-    -fx-padding: 10 20;
+    -fx-padding: 10px 20px;
     -fx-font-size: 14px;
     -fx-background-color: #28a745;
     -fx-text-fill: white;
     -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
     -fx-cursor: hand;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 4, 0, 0, 2);
 }
 
 .button:hover {
     -fx-background-color: #218838;
 }
 
+/* Pour le GridPane ou VBox contenant les champs */
+.form-container {
+    -fx-spacing: 12px;
+    -fx-padding: 20px;
+    -fx-alignment: center;
+}

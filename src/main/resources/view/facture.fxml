@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane stylesheets="@facture.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.SystemeDeFactureController">
-   <top>
+<BorderPane stylesheets="@facture.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.SystemeDeFactureController">
+   <center>
       <AnchorPane prefHeight="553.0" prefWidth="754.0" BorderPane.alignment="CENTER">
          <children>
             <TitledPane id="titre" animated="false" layoutX="-2.0" prefHeight="66.0" prefWidth="761.0" styleClass="titre" text="Système de facture TopVentes">
@@ -23,19 +19,19 @@
                </font>
             </TitledPane>
 
-            <TextField fx:id="nomAcheteurField" layoutX="375.0" layoutY="150.0" styleClass="text-field" />
-            <TextField fx:id="montantSansTaxesField" layoutX="375.0" layoutY="199.0" styleClass="text-field" />
-            <TextField fx:id="montantTaxesField" layoutX="378.0" layoutY="252.0" styleClass="text-field" />
-            <ComboBox fx:id="modePaiementComboBox" layoutX="404.0" layoutY="312.0" prefWidth="150.0" />
-            <Button fx:id="enregistrerButton" layoutX="378.0" layoutY="396.0" mnemonicParsing="false" styleClass="button" text="Enregistrer" />
+            <TextField fx:id="nomAcheteurField" layoutX="377.0" layoutY="151.0" styleClass="text-field" />
+            <TextField fx:id="montantSansTaxesField" layoutX="380.0" layoutY="200.0" styleClass="text-field" />
+            <TextField fx:id="montantTaxesField" layoutX="380.0" layoutY="253.0" prefHeight="30.0" prefWidth="252.0" styleClass="text-field" />
+            <ComboBox fx:id="modePaiementComboBox" layoutX="379.0" layoutY="312.0" prefHeight="36.0" prefWidth="253.0" />
+            <Button fx:id="enregistrerButton" layoutX="378.0" layoutY="396.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" styleClass="button" text="Enregistrer" />
 
             <TextField disable="true" layoutX="36.0" layoutY="150.0" styleClass="label-field" text="Nom complet de l'acheteur :" />
             <TextField disable="true" layoutX="36.0" layoutY="199.0" styleClass="label-field" text="Montant total sans taxes :" />
             <TextField disable="true" layoutX="36.0" layoutY="252.0" styleClass="label-field" text="Montant des taxes applicables  :" />
             <TextField disable="true" layoutX="36.0" layoutY="312.0" styleClass="label-field" text="Mode de paiement :" />
-            <TextField fx:id="totalDonsField" disable="true" layoutX="378.0" layoutY="482.0" prefHeight="25.0" prefWidth="338.0" text="Total des dons : " styleClass="label-field" />
+            <TextField fx:id="totalDonsField" disable="true" layoutX="378.0" layoutY="482.0" prefHeight="25.0" prefWidth="338.0" styleClass="label-field" text="Total des dons : " />
 
-            <TextField disable="true" layoutX="238.0" layoutY="72.0" prefHeight="39.0" prefWidth="366.0" styleClass="instruction-field" text="Entrer les informations suivantes :">
+            <TextField disable="true" layoutX="218.0" layoutY="106.0" prefHeight="39.0" prefWidth="366.0" styleClass="instruction-field" text="Entrer les informations suivantes :">
                <font>
                   <Font size="15.0" />
                </font>
@@ -48,5 +44,5 @@
             </TextField>
          </children>
       </AnchorPane>
-   </top>
+   </center>
 </BorderPane>
