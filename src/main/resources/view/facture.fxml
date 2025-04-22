@@ -47,7 +47,7 @@
                </opaqueInsets>
             </TextField>
             <TextField disable="true" layoutX="379.0" layoutY="476.0" prefHeight="55.0" text="Inconnu" />
-            <TextField disable="true" layoutX="36.0" layoutY="479.0" prefHeight="52.0" text="Total avec taxes :" />
+            <TextField fx:id="TotalAvecTaxes" disable="true" layoutX="36.0" layoutY="479.0" prefHeight="52.0" text="Total avec taxes :" />
          </children>
       </AnchorPane>
    </center>

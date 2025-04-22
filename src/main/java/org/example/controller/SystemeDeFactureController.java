@@ -6,19 +6,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.example.model.DonCharite;
 
 public class SystemeDeFactureController extends Application {
 
 
-
     @FXML
     private ComboBox<String> modePaiementComboBox;
-
 
 
     @FXML
@@ -26,7 +23,7 @@ public class SystemeDeFactureController extends Application {
 
     private final DonCharite donCharite = new DonCharite();
 
-    public SystemeDeFactureController(){
+    public SystemeDeFactureController() {
 
     }
 
@@ -34,11 +31,14 @@ public class SystemeDeFactureController extends Application {
     public void initialize() {
         modePaiementComboBox.getItems().addAll("Argent", "Carte de débit", "Carte de crédit");
         modePaiementComboBox.getSelectionModel().selectFirst();
-         mettreAJourAffichageDon();
+        mettreAJourAffichageDon();
+
+
+
     }
 
     private void mettreAJourAffichageDon() {
-        totalDonsField.setText(String.format("\"Total des dons de charité : \"", donCharite.getTotalDons()));
+        totalDonsField.setText(String.format("Total des dons de charité : ", donCharite.getTotalDons()));
     }
 
     private void afficherMessage(String titre, String message) {
