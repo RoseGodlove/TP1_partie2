@@ -6,12 +6,40 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class SystemeDeFactureController extends Application {
 
 
+
+    @FXML
+    private ComboBox<String> modePaiementComboBox;
+
+
+
+    @FXML
+    private TextField totalDonsField;
+
+    private final DonCharite donCharite = new DonCharite();
+
+    public SystemeDeFactureController(){
+
+    }
+
+    @FXML
+    public void initialize() {
+        modePaiementComboBox.getItems().addAll("Argent", "Carte de débit", "Carte de crédit");
+        modePaiementComboBox.getSelectionModel().selectFirst();
+         mettreAJourAffichageDon();
+    }
+
+    private void mettreAJourAffichageDon() {
+        totalDonsField.setText(String.format("\"Total des dons de charité : \"", donCharite.getTotalDons()));
+    }
 
     private void afficherMessage(String titre, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -28,9 +56,11 @@ public class SystemeDeFactureController extends Application {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/facture.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/facture.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
         stage.setTitle("TopVentes - Facture");
         stage.setScene(scene);
@@ -40,7 +70,4 @@ public class SystemeDeFactureController extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
-
-
 }
