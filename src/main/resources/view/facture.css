@@ -1,7 +1,7 @@
 .titre {
-    -fx-font-size: 30px;
+    -fx-font-size: 32px;
     -fx-font-weight: bold;
-    -fx-text-fill:black;
+    -fx-text-fill: #003366;
     -fx-background-color: #003366;
     -fx-alignment: center;
     -fx-padding: 20px;
@@ -11,30 +11,34 @@
 }
 
 .label-field {
-    -fx-font-size: 14px;
-    -fx-text-fill: #003366;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #003355;
     -fx-padding: 6px 0;
 }
 
 .text-field {
     -fx-pref-width: 300px;
-    -fx-font-size: 14px;
-    -fx-padding: 8px 12px;
-    -fx-background-color: #f9f9f9;
-    -fx-border-color: #ccc;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 14px;
+    -fx-background-color: rgba(255, 255, 255, 0.85);
+    -fx-border-color: rgba(0, 51, 85, 0.18);
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
+    -fx-text-fill: #001f3f;
+    -fx-font-weight: bold;
 }
 
 .instruction-field {
-    -fx-font-size: 15px;
-    -fx-text-fill: #333;
+    -fx-font-size: 17px;
     -fx-padding: 5px 0;
+    -fx-text-fill: #002d72;
+    -fx-font-weight: bold;
 }
 
 .button {
     -fx-padding: 10px 20px;
-    -fx-font-size: 14px;
+    -fx-font-size: 20px;
     -fx-background-color: #28a745;
     -fx-text-fill: white;
     -fx-background-radius: 8px;

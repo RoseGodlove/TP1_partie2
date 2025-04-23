@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane stylesheets="@facture.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.SystemeDeFactureController">
-   <center>
+   <top>
       <AnchorPane prefHeight="686.0" prefWidth="832.0" BorderPane.alignment="CENTER">
          <children>
             <TitledPane id="titre" animated="false" layoutX="-2.0" prefHeight="106.0" prefWidth="839.0" styleClass="titre" text="Système de facture TopVentes">
@@ -23,19 +23,19 @@
                </font>
             </TitledPane>
 
-            <TextField fx:id="nomAcheteurField" layoutX="377.0" layoutY="151.0" styleClass="text-field" />
-            <TextField fx:id="montantSansTaxesField" layoutX="377.0" layoutY="199.0" styleClass="text-field" />
-            <TextField fx:id="montantTaxesField" layoutX="377.0" layoutY="252.0" prefHeight="30.0" prefWidth="252.0" styleClass="text-field" />
-            <ComboBox fx:id="modePaiementComboBox" layoutX="379.0" layoutY="312.0" prefHeight="36.0" prefWidth="253.0" />
-            <Button fx:id="enregistrerButton" layoutX="378.0" layoutY="396.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" styleClass="button" text="Enregistrer" />
+            <TextField fx:id="nomAcheteurField" layoutX="377.0" layoutY="174.0" styleClass="text-field" />
+            <TextField fx:id="montantSansTaxesField" layoutX="377.0" layoutY="246.0" styleClass="text-field" />
+            <TextField fx:id="montantTaxesField" layoutX="377.0" layoutY="320.0" prefHeight="30.0" prefWidth="252.0" styleClass="text-field" />
+            <ComboBox fx:id="modePaiementComboBox" layoutX="380.0" layoutY="389.0" prefHeight="36.0" prefWidth="253.0" />
+            <Button fx:id="enregistrerButton" layoutX="381.0" layoutY="453.0" mnemonicParsing="false" onAction="#enregistrerFacture" prefHeight="40.0" prefWidth="250.0" styleClass="button" text="Enregistrer" />
 
-            <TextField disable="true" layoutX="36.0" layoutY="150.0" styleClass="label-field" text="Nom complet de l'acheteur :" />
-            <TextField disable="true" layoutX="36.0" layoutY="199.0" styleClass="label-field" text="Montant total sans taxes :" />
-            <TextField disable="true" layoutX="36.0" layoutY="252.0" styleClass="label-field" text="Montant des taxes applicables  :" />
-            <TextField disable="true" layoutX="36.0" layoutY="312.0" styleClass="label-field" text="Mode de paiement :" />
+            <TextField disable="true" layoutX="36.0" layoutY="174.0" styleClass="label-field" text="Nom complet de l'acheteur :" />
+            <TextField disable="true" layoutX="36.0" layoutY="246.0" styleClass="label-field" text="Montant total sans taxes :" />
+            <TextField disable="true" layoutX="36.0" layoutY="320.0" styleClass="label-field" text="Montant des taxes applicables  :" />
+            <TextField disable="true" layoutX="36.0" layoutY="389.0" styleClass="label-field" text="Mode de paiement :" />
             <TextField fx:id="totalDonsField" disable="true" layoutX="527.0" layoutY="626.0" prefHeight="54.0" prefWidth="338.0" styleClass="label-field" text="Total des dons : " />
 
-            <TextField disable="true" layoutX="218.0" layoutY="106.0" prefHeight="39.0" prefWidth="366.0" styleClass="instruction-field" text="Entrer les informations suivantes :">
+            <TextField disable="true" layoutX="215.0" layoutY="109.0" prefHeight="53.0" prefWidth="458.0" styleClass="instruction-field" text="Entrer les informations suivantes :">
                <font>
                   <Font size="15.0" />
                </font>
@@ -46,9 +46,9 @@
                   <Insets />
                </opaqueInsets>
             </TextField>
-            <TextField disable="true" layoutX="379.0" layoutY="476.0" prefHeight="55.0" text="Inconnu" />
-            <TextField fx:id="TotalAvecTaxes" disable="true" layoutX="36.0" layoutY="479.0" prefHeight="52.0" text="Total avec taxes :" />
+            <TextField fx:id="MontantInconnu" disable="true" layoutX="377.0" layoutY="531.0" prefHeight="55.0" text="Inconnu" />
+            <TextField fx:id="TotalAvecTaxes" disable="true" layoutX="36.0" layoutY="533.0" prefHeight="52.0" text="Total avec taxes :" />
          </children>
       </AnchorPane>
-   </center>
+   </top>
 </BorderPane>
