@@ -80,13 +80,13 @@ public class SystemeDeFactureController extends Application {
      */
     public void enregistrerFacture() {
         try {
-            String nom = nomAcheteurField.getText();
+
             double montantSansTaxes = Double.parseDouble(montantSansTaxesField.getText());
             double montantTaxes = Double.parseDouble(montantTaxesField.getText());
             String modePaiement = modePaiementComboBox.getValue();
 
             // Délégation à Comptabilite
-            double totalAvecTaxes = comptabilite.enregistrerFacture(nom, montantSansTaxes, montantTaxes, modePaiement);
+            double totalAvecTaxes = comptabilite.saisirFacture(montantSansTaxes, montantTaxes, modePaiement);
 
             // Mise à jour de l'affichage
             MontantInconnu.setText(String.format("%.2f $", totalAvecTaxes));
