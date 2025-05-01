@@ -25,7 +25,7 @@ public class DonCharite {
      * Affiche le total actuel des dons de charité dans la console.
      */
     public void afficherTotalDons() {
-        System.out.println("Total des dons de charité : " + String.format("%.2f", totalDons) + " $");
+        System.out.println("Total dons de charité : " + String.format("%.2f", totalDons) + " $");
     }
 
     public double getTotalDons() {

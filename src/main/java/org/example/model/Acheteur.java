@@ -11,6 +11,15 @@ public class Acheteur {
         this.adresse = adresse;
     }
 
+    /**
+     * Valide que le nom contient au moins 3 lettres alphabétiques.
+     * @param nom Le nom à valider.
+     * @return true si le nom est valide, sinon false.
+     */
+    public boolean validerNom(String nom) {
+        return nom != null && nom.matches("[a-zA-ZÀ-ÿ\\s'-]{3,}");
+    }
+
 
     public String getNomComplet() {
         return nomComplet;
